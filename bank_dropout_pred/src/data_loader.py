@@ -15,6 +15,9 @@ if X_df.isnull().values.any():
     print("WARNING: Missing values found. Imputing with the mean.")
 X_np = X_df.values.astype(np.float32)
 y_np = y_df.values.astype(np.float32)
+counts = np.bincount(y_np.flatten().astype(int))
+pos_weight = counts[0]/counts[1]
+
 X_tesnor = torch.tensor(X_np, dtype=torch.float32)
 y_tensor = torch.tensor(y_np, dtype=torch.float32).squeeze()
 y_tensor = y_tensor.unsqueeze(1)
