@@ -3,6 +3,8 @@ import torch.nn as nn
 import config
 import data_loader
 
+# Version: 0.1 
+
 class Classifier(nn.Module):
     def __init__(self, in_num):
         super().__init__()

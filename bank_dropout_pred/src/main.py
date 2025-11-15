@@ -15,3 +15,4 @@ trainer = trainer.Trainer(model,
                           )
 trainer.train(patience=10)
 trainer.tester(['accuracy', 'f1_score', 'precision', 'recall', 'roc_auc'], 0.3)
+print(model)

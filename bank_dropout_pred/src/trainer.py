@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.optim as optim
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
 
-
+# Version: 0.1 
 
 
 class Trainer():
